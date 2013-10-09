@@ -1,0 +1,40 @@
+\input{includes/global.tex}
+
+\newcommand{\currentPostTitle}{Testing \LaTeX}
+\newcommand{\currentPostSubTitle}{text to insert}
+\newcommand{\latestKnownVersion}{V0.1}
+
+\begin{document}
+\input{includes/headings.tex}
+
+Working with clojure is quite difficult for me still. I will try to write this series to both learn more about it and work with new ideas.
+
+\begin{listing}[H]
+	\begin{minted}[obeytabs=true,linenos=true,gobble=1,fontsize=\footnotesize]{clojure}
+		(ns ui.core
+		  (:require [cljs.core.async :as async
+		   :refer [<! >! chan close! sliding-buffer put! alts!]]
+		   [enfocus.core :as ef]
+		   [enfocus.effects :as effects]
+		   [enfocus.events :as ev]
+		   [goog.dom :as dom]
+		   [ui.templates :as t :refer [data-set]]
+		   [clojure.string :refer [join blank?]])
+		  (:require-macros [enfocus.macros :as em]
+		   [cljs.core.async.macros :as m :refer [go alt!]]))	
+	\end{minted}
+	\caption{Example of a listing.}
+	\label{lst:example}
+\end{listing}
+
+That was an example ClojureScript namespace that I am using.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=90mm]{assets/presentation-pic-3.jpg}
+	\caption{A simple caption}
+	\label{overflow}
+\end{figure}
+
+\input{includes/endcap.tex}
+\end{document}

@@ -1,0 +1,10 @@
+\documentclass{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{baskervald}
+\usepackage{graphicx}
+\usepackage{datetime}
+\usepackage[]{minted}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}[arc=0mm,colback=yellow!9!white,colframe=yellow!9!white]}
+\AfterEndEnvironment{minted}{\end{tcolorbox}}
