@@ -1,0 +1,80 @@
+\input{includes/global.tex}
+\newcommand{\latestKnownVersion}[1]{v0-01}
+\title{Restarting in LaTeX}
+\author{Boris Kourtoukov}
+\date{modified on: \today}
+\begin{document}
+\maketitle
+
+I have decided to convert my blog into \LaTeX. Largely to see where this can go but also to have more control over my content. (see figure~\ref{fig:marginfig})
+
+The Tufte-LATEX document classes define a style similar to the style
+Edward Tufte uses in his books and handouts. Tufte's style is known
+for its extensive use of sidenotes, tight integration of graphics with
+text, and well-set typography. This document aims to be at once a
+demonstration of the features of the Tufte-LATEX document classes
+and a style guide to their use.
+
+\begin{marginfigure}%
+  \includegraphics[width=\linewidth]{helix}
+  \caption{This is a margin figure .  The helix is defined by 
+    $x = \cos(2\pi z)$, $y = \sin(2\pi z)$, and $z = [0, 2.7]$.  The figure was
+    drawn using Asymptote (\url{http://asymptote.sf.net/}).}
+  \label{fig:marginfig}
+\end{marginfigure}
+
+Each post is now a dated .pdf \footnote{This is a sidenote that was entered
+using the \texttt{\textbackslash footnote} command.} with it's .tex source available for browsing. All content should remain as is (relatively) but I am not aiming for a lot of backwards compatibility.  
+
+The Tufte-LATEX document classes define a style similar to the style
+Edward Tufte uses in his books and handouts. Tufte's style is known
+for its extensive use of sidenotes, tight integration of graphics with
+text, and well-set typography. This document aims to be at once a
+demonstration of the features of the Tufte-LATEX document classes
+and a style guide to their use.
+
+\begin{table}[ht]
+  \centering
+  \fontfamily{ppl}\selectfont
+  \begin{tabular}{ll}
+    \toprule
+    Margin & Length \\
+    \midrule
+    Paper width & \unit[8\nicefrac{1}{2}]{inches} \\
+    Paper height & \unit[11]{inches} \\
+    Textblock width & \unit[6\nicefrac{1}{2}]{inches} \\
+    Textblock/sidenote gutter & \unit[\nicefrac{3}{8}]{inches} \\
+    Sidenote width & \unit[2]{inches} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Here are the dimensions of the various margins used in the Tufte-handout class.}
+  \label{tab:normaltab}
+\end{table}
+
+The Tufte-LATEX document classes define a style similar to the style
+Edward Tufte uses in his books and handouts. Tufte's style is known
+for its extensive use of sidenotes, tight integration of graphics with
+text, and well-set typography. This document aims to be at once a
+demonstration of the features of the Tufte-LATEX document classes
+and a style guide to their use.
+
+The Tufte-LATEX document classes define a style similar to the style
+Edward Tufte uses in his books and handouts. Tufte's style is known
+for its extensive use of sidenotes, tight integration of graphics with
+text, and well-set typography. This document aims to be at once a
+demonstration of the features of the Tufte-LATEX document classes
+and a style guide to their use.
+
+\newthought{In his later books} Tufte
+starts each section with a bit of vertical space, a non-indented paragraph,
+and sets the first few words of the sentence in \textsc{small caps}.  To
+accomplish this using this style, use the \Verb|\newthought| command
+
+The Tufte-LATEX document classes define a style similar to the style
+Edward Tufte uses in his books and handouts. Tufte's style is known
+for its extensive use of sidenotes, tight integration of graphics with
+text, and well-set typography. This document aims to be at once a
+demonstration of the features of the Tufte-LATEX document classes
+and a style guide to their use.
+
+\input{includes/endcap.tex}

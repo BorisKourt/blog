@@ -32,3 +32,6 @@
 *.vrb
 *.xdy
 *.tdo
+*.fls
+*.pyg
+assets

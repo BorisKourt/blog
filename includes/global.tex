@@ -1,10 +1,17 @@
-\documentclass{scrartcl}
+\documentclass{tufte-handout}
 \usepackage[T1]{fontenc}
 \usepackage{baskervald}
 \usepackage{graphicx}
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{assets/}} % set of paths to search for images
 \usepackage{datetime}
 \usepackage[]{minted}
 \usepackage{tcolorbox}
 \usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing 
 \BeforeBeginEnvironment{minted}{\begin{tcolorbox}[arc=0mm,colback=yellow!9!white,colframe=yellow!9!white]}
 \AfterEndEnvironment{minted}{\end{tcolorbox}}
