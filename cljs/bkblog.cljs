@@ -31,6 +31,11 @@
   (let [window-height (- (.-clientHeight (.-documentElement js/document)) 45)]
   	(ef/at ".flex, .blog-article" (ef/set-attr :height window-height))))
 
+(defn selected-article [pdf]
+  (ef/at "[data-article]" (ef/remove-class "highlight"))
+  (ef/at (str "[data-pdf=" pdf "]") 
+          (ef/add-class "highlight")))
+
 (em/defaction toggle-pdf [pdf]
 	[".blog-article"] (ef/set-attr :src (str viewer pdf)))
 
@@ -41,6 +46,7 @@
           (log "No change")
           (do 
             (toggle-pdf pdf)
+            (selected-article pdf)
             (set-hash pdf)))))))
 
 (defn init-pdf []
@@ -48,6 +54,7 @@
         pdf-file (if (empty? (str js/window.location.hash)) latest-pdf (subs js/window.location.hash 6))
         pdf-path (str viewer pdf-file)]
         (set-hash pdf-file)
+        (selected-article pdf-file)
         (ef/at ".right" 
           (ef/content (article-frame pdf-path)))))
 

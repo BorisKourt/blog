@@ -156,6 +156,10 @@ iframe {
 			&:hover {
 				opacity: 0.9;
 			}
+
+			&.highlight {
+				opacity: 1.0;
+			}
 		}
 	}
 }
