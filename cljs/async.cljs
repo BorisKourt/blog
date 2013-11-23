@@ -12,3 +12,10 @@
       #(let [target (.-currentTarget %)]
         (put! out target))))
     out))
+
+(defn aslisten-live [el type]
+  (let [out (chan)]
+    (ef/at ".wrapper" (ev/listen-live type el
+      #(let [target (.-currentTarget %)]
+        (put! out target))))
+    out))

@@ -36,3 +36,4 @@
 *.pyg
 assets/post-assets
 target
+.sass-cache

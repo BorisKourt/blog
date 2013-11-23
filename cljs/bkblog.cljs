@@ -2,7 +2,7 @@
   (:require [enfocus.core :as ef]
             [enfocus.effects :as effects]
             [enfocus.events :as ev]
-            [bkblog.async :as a :refer [aslisten]]
+            [bkblog.async :as bkblogasync :refer [aslisten aslisten-live]]
             [cljs.core.async :refer [put! chan <!]]
             [clojure.string :as string :refer [join split replace]])
   (:require-macros [enfocus.macros :as em]
@@ -16,6 +16,8 @@
 
 (em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
   ["iframe"] (ef/set-attr :src pdf-path))
+
+(em/deftemplate article-list "cljs/templates/navigation.html" [])
 
 (defn set-window-hash-args [args-map]
   (let [hash-str (reduce (fn [old-str [k v]] (str old-str (name k) "=" v "&")) "#" args-map)
@@ -32,7 +34,7 @@
 (em/defaction toggle-pdf [pdf]
 	[".blog-article"] (ef/set-attr :src (str viewer pdf)))
 
-(let [menu-clicks (aslisten "li[data-article]" :click)]
+(let [menu-clicks (aslisten-live "li[data-article]" :click)]
   (go (while true
   	(let [pdf (ef/from (<! menu-clicks) (ef/get-attr :data-pdf))]
         (if (= pdf (subs js/window.location.hash 6))
@@ -50,7 +52,8 @@
           (ef/content (article-frame pdf-path)))))
 
 (defn setup []
+  ;;(ef/at ".blog-navigation" (ef/content article-list))
   (init-pdf)
   (set-height))
 
-(setup)
+(em/wait-for-load (setup))
