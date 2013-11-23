@@ -4,15 +4,17 @@
             [enfocus.events :as ev]
             [bkblog.async :as a :refer [aslisten]]
             [cljs.core.async :refer [put! chan <!]]
-            [clojure.string :as string :refer [join split]])
+            [clojure.string :as string :refer [join split replace]])
   (:require-macros [enfocus.macros :as em]
                    [cljs.core.async.macros :refer [go]]))
 
 (def log #(.log js/console %))
 
-(def viewer "viewer/web/viewer.html?zoom=auto,0,798&file=/sb/pdfjs/web/posts/")
+(def root-path (replace (replace js/window.location.href (str "http://" js/window.location.host) "") js/window.location.hash ""))
 
-(em/deftemplate article-frame :compiled "templates/frame.html" [pdf-path]
+(def viewer (str "viewer/web/viewer.html?zoom=auto,0,798&file=" root-path "posts/"))
+
+(em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
   ["iframe"] (ef/set-attr :src pdf-path))
 
 (defn set-window-hash-args [args-map]
