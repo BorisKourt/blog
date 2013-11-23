@@ -15,7 +15,7 @@
 (def viewer (str "viewer/web/viewer.html?zoom=auto,0,798&file=" root-path "posts/"))
 
 (em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
-  ["iframe"] (ef/set-attr :src pdf-path))
+  ["iframe"] (ef/set-attr :src (str pdf-path ".pdf")))
 
 (em/deftemplate article-list "cljs/templates/navigation.html" [])
 
@@ -25,7 +25,7 @@
     (set! js/window.location.hash clean-hash-str)))
 
 (defn set-hash [pdf]
-	(set-window-hash-args {:file pdf}))
+	(set-window-hash-args {:post pdf}))
 
 (defn set-height []
   (let [window-height (- (.-clientHeight (.-documentElement js/document)) 45)]
@@ -37,7 +37,7 @@
           (ef/add-class "highlight")))
 
 (em/defaction toggle-pdf [pdf]
-	[".blog-article"] (ef/set-attr :src (str viewer pdf)))
+	[".blog-article"] (ef/set-attr :src (str viewer pdf ".pdf")))
 
 (let [menu-clicks (aslisten-live "li[data-article]" :click)]
   (go (while true
