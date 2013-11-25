@@ -29,12 +29,20 @@
 
 (defn set-height []
   (let [window-height (- (.-clientHeight (.-documentElement js/document)) 45)]
-  	(ef/at ".flex, .blog-article" (ef/set-attr :height window-height))))
+  	(ef/at ".flex, .blog-article, .wrapper" (ef/set-attr :style (str "height:" window-height "px;")))))
 
 (defn selected-article [pdf]
   (ef/at "[data-article]" (ef/remove-class "highlight"))
   (ef/at (str "[data-pdf=" pdf "]") 
           (ef/add-class "highlight")))
+
+(defn set-mobile-menu []
+  (ef/at ".mobile-menu" (ev/listen :click 
+    #((let [current-class (keyword (ef/from ".left" (ef/get-attr :rel)))]
+      (log current-class)
+      (if (= current-class :visible)
+        (ef/at ".left" (ef/set-attr :rel "hidden"))
+        (ef/at ".left" (ef/set-attr :rel "visible"))))))))
 
 (em/defaction toggle-pdf [pdf]
 	[".blog-article"] (ef/set-attr :src (str viewer pdf ".pdf")))
@@ -59,7 +67,8 @@
           (ef/content (article-frame pdf-path)))))
 
 (defn setup []
-  ;;(ef/at ".blog-navigation" (ef/content article-list))
+  (ef/at ".blog-navigation" (ef/html-content (article-list)))
+  (set-mobile-menu)
   (init-pdf)
   (set-height))
 

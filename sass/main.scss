@@ -26,6 +26,7 @@ a {
 	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	position: relative;
 }
 
 .flex {
@@ -164,5 +165,62 @@ a {
 				opacity: 1.0;
 			}
 		}
+	}
+}
+.mobile-menu {
+	display: none;
+	position: fixed;
+	bottom: 4%;
+	left: 50%;
+	margin-left: -20px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	opacity: 0.5;
+	background-color: #474747; /* fallback */
+	background-image: url(../../viewer/web/images/texture.png);
+	z-index: 4;
+	border-radius: 8px;
+}
+
+@media all and (max-width: 940px) {
+	.wrapper {
+		margin-top: 45px;
+		display: block!important;      
+		height: auto;
+	}
+	.flex, .left, .right {
+		display: block;
+		height: auto;
+		-webkit-box-flex: none;      /* OLD - iOS 6-, Safari 3.1-6 */
+		-moz-box-flex: none;         /* OLD - Firefox 19- */
+		-webkit-flex: none;          /* Chrome */
+		-ms-flex: none;              /* IE 10 */
+		flex: none;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	}
+	.left {
+		position: fixed;
+		top: 45px;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		background-color: #474747; /* fallback */
+		background-image: url(../../viewer/web/images/texture.png);
+		display: none;
+	}
+	.right {
+		top: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+	}
+	.mobile-menu {
+		display: block;
+	}
+	section[rel="visible"] {
+		display: block;
+		height: auto;
 	}
 }
