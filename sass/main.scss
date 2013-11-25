@@ -1,3 +1,5 @@
+@import "dm/dm";
+
 body {
 	background: #333;
 	background-image: url(../../viewer/web/images/texture.png);
@@ -16,7 +18,7 @@ iframe {
 	width: 100%;
 }
 a {
-	color: #f2dc77;
+	color: #a59dbc;
 	text-decoration: none;
 }
 .wrapper {

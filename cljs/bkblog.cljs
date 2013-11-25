@@ -3,6 +3,7 @@
             [enfocus.effects :as effects]
             [enfocus.events :as ev]
             [bkblog.async :as bkblogasync :refer [aslisten aslisten-live]]
+            [bkblog.dm :as dm]
             [cljs.core.async :refer [put! chan <!]]
             [clojure.string :as string :refer [join split replace]])
   (:require-macros [enfocus.macros :as em]
@@ -12,7 +13,7 @@
 
 (def root-path (replace (replace js/window.location.href (str "http://" js/window.location.host) "") js/window.location.hash ""))
 
-(def viewer (str "viewer/web/viewer.html?zoom=auto,0,798&file=" root-path "posts/"))
+(def viewer (str "viewer/web/viewer.html?zoom=pagewidth,0,798&file=" root-path "posts/"))
 
 (em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
   ["iframe"] (ef/set-attr :src (str pdf-path ".pdf")))
@@ -38,9 +39,9 @@
 
 (defn set-mobile-menu []
   (ef/at ".mobile-menu" (ev/listen :click 
-    #((let [current-class (keyword (ef/from ".left" (ef/get-attr :rel)))]
+    #((let [current-class (ef/from ".left" (ef/get-attr :rel))]
       (log current-class)
-      (if (= current-class :visible)
+      (if (= current-class "visible")
         (ef/at ".left" (ef/set-attr :rel "hidden"))
         (ef/at ".left" (ef/set-attr :rel "visible"))))))))
 
@@ -51,7 +52,6 @@
   (go (while true
   	(let [pdf (ef/from (<! menu-clicks) (ef/get-attr :data-pdf))]
         (if (= pdf (subs js/window.location.hash 6))
-          (log "No change")
           (do 
             (toggle-pdf pdf)
             (selected-article pdf)
@@ -68,6 +68,7 @@
 
 (defn setup []
   (ef/at ".blog-navigation" (ef/html-content (article-list)))
+  (ef/at ".bktran" (ef/html-content (dm/menu "Bob" "#" {:cat "cat" :bat "bat"} "test")))
   (set-mobile-menu)
   (init-pdf)
   (set-height))
