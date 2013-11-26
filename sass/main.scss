@@ -46,6 +46,7 @@ a {
 	-webkit-flex: 5;          /* Chrome */
 	-ms-flex: 5;              /* IE 10 */
 	flex: 5;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	box-shadow: -5px 0 5px -5px rgba(0,0,0,0.5);
 }
 
 .left {
@@ -60,7 +61,7 @@ a {
 		height: 32px;
 		line-height: 31px;
 		font-size: 12px;
-		text-indent: 10%;
+		text-indent: 20px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -148,7 +149,7 @@ a {
 		margin: 0;
 
 		li {
-			padding: 10px 26px;
+			padding: 10px 20px;
 			box-shadow: inset 1px 0 0 hsla(0,0%,100%,.08),
 			          inset 0 1px 1px hsla(0,0%,0%,.15),
 			          inset 0 -1px 0 hsla(0,0%,100%,.05),

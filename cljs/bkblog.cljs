@@ -13,7 +13,7 @@
 
 (def root-path (replace (replace js/window.location.href (str "http://" js/window.location.host) "") js/window.location.hash ""))
 
-(def viewer (str "viewer/web/viewer.html?zoom=pagewidth,0,798&file=" root-path "posts/"))
+(def viewer (str "viewer/web/viewer.html?zoom=pagewidth&file=" root-path "posts/"))
 
 (em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
   ["iframe"] (ef/set-attr :src (str pdf-path ".pdf")))
@@ -51,7 +51,7 @@
 (let [menu-clicks (aslisten-live "li[data-article]" :click)]
   (go (while true
   	(let [pdf (ef/from (<! menu-clicks) (ef/get-attr :data-pdf))]
-        (if (= pdf (subs js/window.location.hash 6))
+        (if (not= pdf (subs js/window.location.hash 6))
           (do 
             (toggle-pdf pdf)
             (selected-article pdf)
@@ -68,9 +68,11 @@
 
 (defn setup []
   (ef/at ".blog-navigation" (ef/html-content (article-list)))
-  (ef/at ".bktran" (ef/html-content (dm/menu "Bob" "#" {:cat "cat" :bat "bat"} "test")))
+  (ef/at ".bktran" (ef/html-content (dm/menu "Boris<span>Kourt</span>" "/blog/" {:cat "cat" :bat "bat"} {":cat" "http://hats.hats cat bat" ":bat" "http://hats.hats cat bat"})))
   (set-mobile-menu)
   (init-pdf)
   (set-height))
+
+;; (select-keys map keyseq)
 
 (em/wait-for-load (setup))
