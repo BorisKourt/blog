@@ -66,7 +66,8 @@
         (ef/at ".right" 
           (ef/content (article-frame pdf-path)))))
 
-(defn setup []
+(defn setup [available]
+  (log available)
   (ef/at ".blog-navigation" (ef/html-content (article-list)))
   (ef/at ".bktran" (ef/html-content (dm/menu "Boris<span>Kourt</span>" "/blog/" {:cat "cat" :bat "bat"} {":cat" "http://hats.hats cat bat" ":bat" "http://hats.hats cat bat"})))
   (set-mobile-menu)
@@ -75,4 +76,8 @@
 
 ;; (select-keys map keyseq)
 
-(em/wait-for-load (setup))
+(defn modernity []
+  (let [available (ef/from "html" (ef/get-attr :class))]
+    (em/wait-for-load (setup [vec available]))))
+
+(modernity)
