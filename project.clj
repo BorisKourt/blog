@@ -5,7 +5,7 @@
                  [org.clojure/clojurescript "0.0-2080"]
                  [com.cemerick/url "0.1.0"]
                  [enfocus "2.0.2"]
-                 [org.clojure/core.async "0.1.256.0-1bf8cf-alpha"]
+                 [org.clojure/core.async "0.1.262.0-151b23-alpha"]
                  [net.clojure/monads "1.0.0"]]
   :plugins [[lein-cljsbuild "1.0.0"]]
   :cljsbuild {

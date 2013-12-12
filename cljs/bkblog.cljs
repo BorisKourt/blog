@@ -23,7 +23,7 @@
 (em/deftemplate article-frame :compiled "cljs/templates/frame.html" [pdf-path]
   ["iframe"] (ef/set-attr :src (str pdf-path ".pdf")))
 
-(em/deftemplate article-list "cljs/templates/navigation.html" [type]
+(em/deftemplate article-list :compiled "cljs/templates/navigation.html" [type]
   ["li"] (if 
     (not= type :standard) 
     (ef/do-> 
@@ -67,23 +67,25 @@
             (selected-article pdf)
             (set-hash pdf)))))))
 
-(let [direct-menu-clicks (aslisten-live "li[data-direct]" :mouseover)]
-  (go (while true
-    (let [target (<! direct-menu-clicks)
-          pdf (ef/from target (ef/get-attr :data-pdf))
-          content (ef/from target (ef/get-text))]
-        (ef/at target 
-          (ef/do->
-            (ef/html-content 
-              (str "<a href='" root-path "posts/" pdf ".pdf' target='_blank'>" content "</a>"))))))))
+; (let [direct-menu-clicks (aslisten-live "li[data-direct]" :mouseover)]
+;   (go (while true
+;     (let [target (<! direct-menu-clicks)
+;           pdf (ef/from target (ef/get-attr :data-pdf))
+;           content (ef/from target (ef/get-text))]
+;         (ef/at target 
+;           (ef/do->
+;             (ef/html-content 
+;               (str "<a href='" root-path "posts/" pdf ".pdf' target='_blank'>" content "</a>"))))))))
 
-(defn adjust-alt-menu []
-  (let [ pdf (ef/from target (ef/get-attr :data-pdf))
-         content (ef/from target (ef/get-text))]
-        (ef/at target 
-          (ef/do->
-            (ef/html-content 
-              (str "<a href='" root-path "posts/" pdf ".pdf' target='_blank'>" content "</a>"))))))))
+; (defn adjust-alt-menu []
+;   (let [ pdf (ef/from target (ef/get-attr :data-pdf))
+;          content (ef/from target (ef/get-text))]
+;         (ef/at target 
+;           (ef/do->
+;             (ef/html-content 
+;               (str "<a href='" root-path "posts/" pdf ".pdf' target='_blank'>" content "</a>"))
+;             (ef/html-content 
+;               (str "<a href='" root-path "posts/" pdf ".pdf' target='_blank'>" content "</a>"))))))
 
 
 (defn init-pdf []
@@ -107,12 +109,12 @@
   [available]
   (case available
     ([true true true]) (do 
-      (ef/at ".unsupported__menu" (ef/html-content (article-list :lacks-reader)))
+      (ef/at ".blog-navigation" (ef/html-content (article-list :standard)))
       (set-mobile-menu)
       (css-rules :standard)
       (init-pdf))
     ([true true nil] [true nil nil]) (do 
-      (ef/at ".unsupported__menu" (ef/html-content (article-list :standard)))
+      (ef/at ".blog-navigation" (ef/html-content (article-list :standard)))
       (set-mobile-menu)
       (css-rules :lacks-flex)
       (init-pdf))
