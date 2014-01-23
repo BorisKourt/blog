@@ -2,7 +2,7 @@
   :description "UI for boriskourt.com"
   :url "http://boriskourt.com/"
   :dependencies [[org.clojure/clojure "1.6.0-alpha2"]
-                 [org.clojure/clojurescript "0.0-2080"]
+                 [org.clojure/clojurescript "0.0-2120"]
                  [com.cemerick/url "0.1.0"]
                  [enfocus "2.0.2"]
                  [org.clojure/core.async "0.1.262.0-151b23-alpha"]
