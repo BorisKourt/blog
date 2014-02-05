@@ -36,4 +36,5 @@
 *.pyg
 assets
 target
+solo.*
 /.sass-cache
