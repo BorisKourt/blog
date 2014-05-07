@@ -34,7 +34,9 @@
 *.tdo
 *.fls
 *.pyg
+*.pdf
 assets
 target
 solo.*
 /.sass-cache
+/school
