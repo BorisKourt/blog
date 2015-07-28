@@ -10,103 +10,243 @@
     <meta name="copyright" content="© 2015 Boris Kourtoukov" />
     <meta http-equiv="last-modified" content="2015-02-09T13:55:00-05:00" />
     <style type="text/css">
+body {
+  background: #f66;
+  font-weight: normal;
+}
 
-        body {
-            margin: 0; padding: 0;
-            background: #faf3f3;
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            line-height: 1.6em;
-            font-family: "Georgia", serif;
-        }
-        a {
-            color: #8f1516;
-            text-decoration: none;
-        }
-        h2, h1 {
-            font-family: monospace;
-            font-size: 1.2em;
-            margin-bottom: 1em;
-            font-weight: normal;
-        }
-        h1 {
-            font-size: 1.4em;
-        }
-        h2 {
-            padding-top: 1.6em;
-        }
-        a span {
-            color: #888;
-            font-style: italic;
-        }
-        .redesign__notice {
-            padding: 6em 2em 2em 2em;
-            margin: 0 0 3em 0;
-            background: #fef8f8;
-            font-size: 24px;
-            line-height: 1.6em;
-        }
+.wrap {
+  display: block;
+  clear: both;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
-        .redesign__work {
-            padding: 0 0 6em;
-        }
+.biome-1, .biome-2, .biome-3, .slice-1, .slice-2 {
+  background: transparent;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.biome-1 svg, .biome-2 svg, .biome-3 svg, .slice-1 svg, .slice-2 svg {
+  -webkit-will-change: position;
+  -moz-will-change: position;
+  -ms-will-change: position;
+  -o-will-change: position;
+  will-change: position;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-        .redesign__work a {
-            display: block;
-            padding: 0 2em;
-        }
+.slice-1, .slice-2 {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-will-change: opacity;
+  -moz-will-change: opacity;
+  -ms-will-change: opacity;
+  -o-will-change: opacity;
+  will-change: opacity;
+}
 
-        .link-group {
-            background: #f3eaea;
-            margin: 0.4em 0;
-            padding: 0.4em 0em;
-        }
-        .link-group__credit {
-            font-size: 12px;
-            color: #777;
-        }
+.slice-1 {
+  z-index: 4;
+  background: #f2dc77;
+  opacity: 0.1;
+  -webkit-animation: opacity-up 8s infinite alternate;
+  animation: opacity-up 8s infinite alternate;
+}
+
+.slice-2 {
+  z-index: 2;
+  background: #77dcf2;
+  opacity: 0.6;
+  -webkit-animation: opacity-down 12s infinite alternate;
+  animation: opacity-down 12s infinite alternate;
+}
+
+@-webkit-keyframes opacity-up {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@-webkit-keyframes opacity-down {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@keyframes opacity-up {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@keyframes opacity-down {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+.biome-1 {
+  z-index: 3;
+  position: fixed;
+  width: 300vmax;
+  height: 400vmax;
+  bottom: -140vmax;
+  right: -120vmax;
+}
+
+.biome-2 {
+  -webkit-will-change: opacity;
+  -moz-will-change: opacity;
+  -ms-will-change: opacity;
+  -o-will-change: opacity;
+  will-change: opacity;
+  z-index: 1;
+  top: -40vmax;
+  left: -70vmax;
+  width: 200vmax;
+  height: 200vmax;
+}
+
+.biome-3 {
+  -webkit-will-change: opacity;
+  -moz-will-change: opacity;
+  -ms-will-change: opacity;
+  -o-will-change: opacity;
+  will-change: opacity;
+  z-index: 3;
+  bottom: -210vmax;
+  right: -120vmax;
+  width: 300vmax;
+  height: 300vmax;
+}
+
+.context {
+  position: relative;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  visibility: hidden;
+}
+.context .self {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 0 0 5%;
+  min-height: 100vh;
+}
+.context .self .less {
+  padding: 80px;
+}
+
+.less {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 18px;
+}
+.less hr {
+  height: 6px;
+  border: none;
+  background: #fff;
+}
+.less h1 {
+  font-size: 64px;
+  line-height: 1.1em;
+}
+.less h2 {
+  font-size: 38px;
+  line-height: 1.3em;
+  margin-bottom: 50px;
+}
+.less h3 {
+  font-size: 26px;
+  line-height: 1.4em;
+  margin-bottom: 1em;
+}
+.less p {
+  line-height: 1.6em;
+}
+.less .area {
+  border-top: 5px solid #fff;
+  padding-top: 10px;
+  margin-bottom: 60px;
+}
 
     </style>
 </head>
 <body>
-  <aside class="redesign__notice">
-     <p>Under a much needed re-design. <br />Enjoy this temporary link-folio or take a look at <a href="http://boriskourt.com/" title="the blog">the Blog</a> &amp; <a href="http://twitter.com/boriskourt" title="boriskourt">Twitter</a></p>
- </aside>
- <nav class="redesign__work">
-    <h1>Projects</h1>
-    <h2>Technology (Wearables)</h2>
-    <!-- <a target="_blank" href="http://periphery.technology/">Periphery <span>Coming Soon</span></a> -->
-    <aside class="link-group">
-        <a target="_blank" href="http://quipucamayoc.com/">Quipucamayoc <span>In Progress</span></a>
-        <span class="link-group__credit">As part of Ayllu Intiwatana</span>
-    </aside>
-    <aside class="link-group">
-        <a target="_blank" href="http://dx.doi.org/10.1145/2677199.2690875">Monarch v2 (TEI 2015)</a>
-        <span class="link-group__credit">As part of the team at the Social Body Lab</span>
-    </aside>
-    <aside class="link-group">
-        <a target="_blank" href="https://vimeo.com/89654806">Monarch</a>
-        <a target="_blank" href="https://vimeo.com/89654807">Cardinal</a>
-        <span class="link-group__credit">As part of the team at the Social Body Lab for Intel Research</span>
-    </aside>
-    <a target="_blank" href="http://boriskourt.com/2013/04/12/from-an-oled-screen-to-technosapien/">Peripheral</a>
-    <h2>Web</h2>
-    <a>Digital Futures Initiative <span>Coming Soon</span></a>
-    <a target="_blank" href="http://situationlab.org/">Situation Lab</a>
-    <a target="_blank" href="http://ghost.cat/">Ghost Cat</a>
-    <aside class="link-group">
-        <a target="_blank" href="http://conciergeplus.com/">Concierge Plus</a>
-        <a target="_blank" href="http://www.spghotescapes.com/">SPG Hot Escapes</a>
-        <a target="_blank" href="http://starwoodhotelsindonesia.com/">SWH Indonesia</a>
-        <a target="_blank" href="http://www.moscowcountryclub.ru/en">Moscow Country Club</a>
-        <a target="_blank" href="http://www.marathonwatch.com/">Marathon Watch</a>
-        <a target="_blank" href="http://www.starwoodgreece.com/en">Starwood Greece</a>
-        <a target="_blank" href="http://www.starwoodlatinamerica.com/en">Starwood Latin America</a>
-        <span class="link-group__credit">As part of the team at WebCanada</span>
-    </aside>
-    <a target="_blank" href="http://chenthooran.com/">Chenthooran</a>
-    <a target="_blank" href="http://fugata.co.uk/">Fugata Quintet</a>
-</nav>
+<div class="wrap">
+  <div class="biome-1"><svg width="100%" height="100%" viewBox="0 0 1228 833" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Life</title><defs><filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="10" in="SourceGraphic" result="blur"/></filter><path id="b" d="M384 215c188 50-97-98 187 42 75.56 37.248-154.142 21.534-82 30 199.013 23.355 636.1 10.248 355 113-309.96 113.3-197.122 135.982-229 132-7.512-.938-177.418 1.814-186-2-1.863-.828-90.208 136.722-92 136-15.957-6.426-84.266 13.373-80-18 6.83-50.227 93.57-164.586 80-223-23-99 52-138-24-138s-103-45-117 8-20 113 21 174c9.547 14.204 41.935 48.926 46 56 13.39 23.307-18.166-8.015 34 15 68 30 69 17 168 49s157 98 199 40c25.722-35.52-24.514 126.287-36 48-7.27-49.545 43.145-348.396 4-367-8.18-3.888 59.324 223.372 50 215-105.792-94.988-348.978-669.872-292-294 62 409 275 481 81 417-7.96-2.626-60.583-22.127-68-25-173.367-67.157-153.585-181-27-181 132 0 296 62 347-35s70-152 33-182c-14.37-11.652 27.63 21.026 27-19-.99-63.03-47.492-182.043-127 10-130 314-221 504-266 330s99-191 297-108 60-443.45-24-259-60 181-131 220 45 110-95 62c-30.644-10.507-117.094 149.044-140 124-81.74-89.373-45.67-418.12 59-390 44.052 11.835 189.402 134.86 241 187 67.192 67.9 118.12 100.525 136 134 10.154 19.012-5.753 51.435 3 58 36 27 106 225 58-77-19.72-124.068-242.367-164.955-233-228 4.39-29.538 37.412 39.193 71 18 69.224-43.68 154.265-155.522 90-98-5.725 5.125 97.836 65.994 92 72-15.988 16.455-214.46 125.268-233 146-83.496 93.37-240.31 155.396-284 216-43.26 60.006 26.293 119.467 6 37-47-191-113-253-30-278 22.034-6.637 94.37-42.935 111-55 46.015-33.384 25.688-41.613 94 48 6.27 8.226-1.89 126.336 3 134 67.644 106 27.63 47.382 147 25 128-24 220-87 193-167-3.486-10.33-141.692-39.905-139-58 9.274-62.34 133.918-157.944 175-189 39.347-29.745-2.192.084-107 159-107.912 163.622-14.903 264.963-87 300-92.26 44.834-332.557-11.38-300-104 58-165-37-210 88-167 58.964 20.284 19.668 218.906 40 306 22.77 97.54 103.378 83.906 143 95 75 21 241 223 251-33 2.032-52.032-24.69-205.65-63-227-72.12-40.194-191.84 78.567-284 48-52.546-17.428 36.85 198.224 125 182 39.486-7.268-382.42-254.76-361-324 12.21-39.463 482.043 74.538 476 84-4.614 7.226-319.3-121.06-323-112-11.85 29.01 51.28 41.543 38 72-84.23 193.18-265.358 404.353-293 229-32-203-85-393 102-367s205-144 295 56 108 320 174 214c47.53-76.335-307.96-91.222-408-102-38.877-4.19 139.194-225.03 128-124-40 361-55 371-64 371s-271-11-8 7c74.01 5.065-60.135 81.497-16 88 84.85 12.5 447.662 22.576 514-35 21.774-18.898-183-83.56-183-107 0-132 9-244-102-253-21.14-1.714-124.582 293.323-151 306-112.298 53.888-172.048-77.525-151-50 26 34-277 252 40 37 69.06-46.84 222.86-300.874 312-360 11.472-7.61 111.392 83.943 117 80 150.845-106.057-65.18 12.64-124-13-78-34-305-63-312 26s416 176 457 84 154-89 28-241S830-52 603 82c-58.28 34.404-17.152 54.42-58 75-118.25 59.576-261.324 82.877-297 152-48 93-327-54-62 130s242 254 403 219 200 3 233-65 155-170 49-198-239-324-239-25c0 133.366 104.967 106.59 37 170-84.412 78.75-347.87 224.31-380 139-58-154-133-29 205-38s206-170 32-109-376 77-390-73-168-165 21-271S334-26 406 74 195 390 121 614s642-69 592-219c-6.75-20.252-424 235.675-487 287-32.625 26.58 263.98-131.923 267-137 24.114-40.527-380.717 158.202-293 143 37.248-6.455 646.3-290.52 629-259-73 133-255 36-201 145s117-310 171-248 129 123 62 219-81 123-202 113-277-46-290-176 391-181 135-107-399.614 187-202 157c197.614-30 207-105 199-196s-174 242 54 223c96.08-8.007-188.92 98.514-136 4 72.66-129.766 465-466.558 465-433 0 58 97-14-8 101-79.547 87.123-265.05 15.453-375-6-35.18-6.864 18.058 6.182-20 12-157 24-656-192-198 58s-616 351-129 294S401 59 553 254s-9-149 161-47 290-57 261 192 552 472-43 285-767-309-479-366 426-215 401 45 38 236-33 276-250 56-118 43 194-43 179-159c-9.343-72.25-311.448-120.934-526-84-129.923 22.366-266.142 125.08-176 133 239 21 787 269 787 145s10-208-46-243-2-276-51-11 58 280-137 263"/></defs><g filter="url(#a)" fill="none"><use stroke="#000" stroke-width="4" xlink:href="#b"/><use xlink:href="#b"/></g></svg></div>
+  <div class="slice-1"></div>
+  <div class="slice-2"></div>
+  <div class="biome-2"><svg width="100%" height="100%" viewBox="0 0 1293 1451" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Still</title><defs><filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="10" in="SourceGraphic" result="blur"/></filter><path id="b" d="M262.5 584c14.007-30.272-110.37-35.16-97.5-53 112.545-156.003 321.39 99.97 386 21 54.564-66.69 485.05-95.905 471-29-4.49 21.38-385.98 94.73-408.5 125-93 125 81.5 110.5 94.5 118.5S884 342 796 677c-47.93 182.46-85.88 282.584 19.5 238.5 88.1-36.856 323.655-215.45 287-141-80.5 163.5 384.5 228-130 175s-586.5-266-476-258 252-24 83.5 78.5-719 102-251.5 160c235.73 29.245 175.123 84.48 277 85 12.96.066 137.373-6.337 152.5-8 101.794-11.194 355.56-78.034 286.5-154-160-176-37.002-744.5-200-248-6.647 20.248-174.318 48.425-181.5 67-46.468 120.18-92.06 539.592-131 598-102.622 153.922-164.523-211.875-115.5-275.5 65.844-85.457 630.634-281.695 418.992-317.424-14.965-2.527-33.812-4.25-56.992-5.076-38.806-1.382 38.286 59.758 17.5 53.456-167.226-50.694 80.36-302.38-49.5-245.456-34.014 14.91-413.202 493.63-431 501.5-58.6 25.914 305.212-446.093 245-425-78.5 27.5-474 76-269 157.5 71.233 28.32 490.915-61.4 620-51.5 242.404 18.59 187.235 125.798-9.5 178-94.907 25.183-235.315 53.606-304.5 75-32.35 10.004-95.962 15.34-118.5 22.5-82.383 26.175-70.29 33.232-94.5-12.5-45-85-367-104-54.5-296.5s505.492-314 496.5-147.5C817.508 648 167.5 214 506 379c229.693 111.963 536.752 199.752 426.5 229-30.43 8.072 230.364 117.858 89.5 117.456C921.092 725.17 404.287 618.33 395.5 608 345.89 549.68 488.66 114.723 681 98.5c61.607-5.196 109.842 241.09 182.5 285C1163 564.5 1415 661 1158.5 757s-614 159-670 107.5 530-289 556-130S1340 283 1165 622.5s-641 444-700.5 242S477.5 773 447 523 259 310.5 224 347s-400.5 319-32 62.5S609.334 188 628 140c18.666-48 143-128 85 77s88.5-429-40-88-207 320-183 474 96.5 640 152.5 619 145.5-15 137.5-50-19-122-19-61-130 268 32 19.5 332-123 83.5-259.5-277.5 206.5-332 261-173 155-173 25.5S1764.5 1520 971 1177c-109.722-47.43-67.195-373.092-178-407-4.687-1.434-514.126 238.246-517.5 237-493.695-182.34-77.956-32.446-48-237 35-239 33.5-647 485.5-407s731-578.5 365.5 56 155.5-165.5-234 301-984 821-593 519.5S801 1353.5 543 1052s-647.5-473-227.5-311 223-321 61-83.5-330 758 54.5 242c103.543-138.955 200.458-4.036 341-104 381.35-271.246 774.12-621.803 139.5-335C43 853 158.5 1694.5 261 930s-182.5 543.5-64 37-359.5-133-80.5-226 220-267.5 455.5 14.5 235.5 284 298 343 420 657 272.5 64-195.5-725-288.5-747-335-67-429.5 112.5S984.91 297.13 939 313"/></defs><g filter="url(#a)" fill="none"><use stroke="#000" stroke-width="4" xlink:href="#b"/><use xlink:href="#b"/></g></svg></div>
+  <div class="biome-3"><svg width="100%" height="100%" viewBox="0 0 1293 1451" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Still</title><defs><filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="10" in="SourceGraphic" result="blur"/></filter><path id="b" d="M262.5 584c14.007-30.272-110.37-35.16-97.5-53 112.545-156.003 321.39 99.97 386 21 54.564-66.69 485.05-95.905 471-29-4.49 21.38-385.98 94.73-408.5 125-93 125 81.5 110.5 94.5 118.5S884 342 796 677c-47.93 182.46-85.88 282.584 19.5 238.5 88.1-36.856 323.655-215.45 287-141-80.5 163.5 384.5 228-130 175s-586.5-266-476-258 252-24 83.5 78.5-719 102-251.5 160c235.73 29.245 175.123 84.48 277 85 12.96.066 137.373-6.337 152.5-8 101.794-11.194 355.56-78.034 286.5-154-160-176-37.002-744.5-200-248-6.647 20.248-174.318 48.425-181.5 67-46.468 120.18-92.06 539.592-131 598-102.622 153.922-164.523-211.875-115.5-275.5 65.844-85.457 630.634-281.695 418.992-317.424-14.965-2.527-33.812-4.25-56.992-5.076-38.806-1.382 38.286 59.758 17.5 53.456-167.226-50.694 80.36-302.38-49.5-245.456-34.014 14.91-413.202 493.63-431 501.5-58.6 25.914 305.212-446.093 245-425-78.5 27.5-474 76-269 157.5 71.233 28.32 490.915-61.4 620-51.5 242.404 18.59 187.235 125.798-9.5 178-94.907 25.183-235.315 53.606-304.5 75-32.35 10.004-95.962 15.34-118.5 22.5-82.383 26.175-70.29 33.232-94.5-12.5-45-85-367-104-54.5-296.5s505.492-314 496.5-147.5C817.508 648 167.5 214 506 379c229.693 111.963 536.752 199.752 426.5 229-30.43 8.072 230.364 117.858 89.5 117.456C921.092 725.17 404.287 618.33 395.5 608 345.89 549.68 488.66 114.723 681 98.5c61.607-5.196 109.842 241.09 182.5 285C1163 564.5 1415 661 1158.5 757s-614 159-670 107.5 530-289 556-130S1340 283 1165 622.5s-641 444-700.5 242S477.5 773 447 523 259 310.5 224 347s-400.5 319-32 62.5S609.334 188 628 140c18.666-48 143-128 85 77s88.5-429-40-88-207 320-183 474 96.5 640 152.5 619 145.5-15 137.5-50-19-122-19-61-130 268 32 19.5 332-123 83.5-259.5-277.5 206.5-332 261-173 155-173 25.5S1764.5 1520 971 1177c-109.722-47.43-67.195-373.092-178-407-4.687-1.434-514.126 238.246-517.5 237-493.695-182.34-77.956-32.446-48-237 35-239 33.5-647 485.5-407s731-578.5 365.5 56 155.5-165.5-234 301-984 821-593 519.5S801 1353.5 543 1052s-647.5-473-227.5-311 223-321 61-83.5-330 758 54.5 242c103.543-138.955 200.458-4.036 341-104 381.35-271.246 774.12-621.803 139.5-335C43 853 158.5 1694.5 261 930s-182.5 543.5-64 37-359.5-133-80.5-226 220-267.5 455.5 14.5 235.5 284 298 343 420 657 272.5 64-195.5-725-288.5-747-335-67-429.5 112.5S984.91 297.13 939 313"/></defs><g filter="url(#a)" fill="none"><use stroke="#000" stroke-width="4" xlink:href="#b"/><use xlink:href="#b"/></g></svg></div>
+  <div class="context">
+  
+    <div class="self">
+      <div class="less">
+        
+        <div class="area">
+          <h3>Projects</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+        </div>
+        
+        <div class="area">
+          <h3>Experience</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+        </div>
+        
+        <div class="area">
+          <h3>Shows</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+        </div>
+        
+        <div class="area">
+          <h3>Talks</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+        </div>
+        
+        <div class="area">
+          <h3>Teaching</h3>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+        </div>
+        
+        <div class="area">
+          <h3></h3>
+<p>&copy; Boris Kourtoukov 2015</p>  
+        </div>
+        
+      </div>
+    </div>
+  
+  </div>
+</div>
 </body>
 </html>
