@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom"> <title>Boris Kourtoukov: Artist, Wearable Technology Developer</title> <link href="http://boris.kourtoukov.com"/> <link type="application/atom+xml" rel="self" href="http://boris.kourtoukov.com/atom.xml"/> <updated>Tue, 15 Sep 2015 00:43:28 -0400</updated> <author> <name>Boris Kourtoukov</name> </author> <entry> <link type="text/html" rel="alternate" href="http://boris.kourtoukov.com/ClojureScript-Devcards-Example.html"/> <title>ClojureScript Devcards Example</title> <published>2015-09-14 22:52:47</published> <updated>2015-09-14 22:52:47</updated> <author> <name>Boris Kourtoukov</name> <uri>http://boris.kourtoukov.com</uri> </author> <content type="html">&lt;p&gt;Coming Soon!&lt;/p&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="http://boris.kourtoukov.com/Quipucamayoc.html"/> <title>Quipucamayoc</title> <published>2015-09-11 00:18:00</published> <updated>2015-09-11 00:18:00</updated> <author> <name>Boris Kourtoukov</name> <uri>http://boris.kourtoukov.com</uri> </author> <content type="html">&lt;p&gt;&lt;section&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/section&gt;&lt;/p&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="http://boris.kourtoukov.com/Clojure-West-2015.html"/> <title>Clojure West 2015</title> <published>2015-04-24 00:35:16</published> <updated>2015-04-24 00:35:16</updated> <author> <name>Boris Kourtoukov</name> <uri>http://boris.kourtoukov.com</uri> </author> <content type="html">&lt;p&gt;&lt;section&gt;&lt;/p&gt;
+
+&lt;p&gt;A short talk about my experience using Clojure across different
+platforms and environments.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot; &gt;Video of the talk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/section&gt;&lt;/p&gt;
+</content> </entry> </feed>
