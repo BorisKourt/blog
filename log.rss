@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+<atom:link href='https://boris.kourtoukov.com/' rel='self' type='application/rss+xml'/>
+<title>
+Boris Kourtoukov
+</title>
+<link>
+https://boris.kourtoukov.com/
+</link>
+<description>
+Personal Updates
+</description>
+<language>
+en
+</language>
+<pubDate>
+Tue, 05 Jun 2018 14:40:01 -0400
+</pubDate>
+<lastBuildDate>
+Tue, 05 Jun 2018 14:40:01 -0400
+</lastBuildDate>
+<managingEditor>
+boris@kourtoukov.com
+</managingEditor>
+<copyright>
+Copyright 2018 Boris Kourtoukv
+</copyright>
+<generator>
+clj-rss
+</generator>
+<item>
+<title>
+Log Entry 0
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l0
+</link>
+<description>
+<![CDATA[ <p>Hello Log!</p> ]]>
+</description>
+</item>
+</channel>
+</rss>
