@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Tue, 05 Jun 2018 14:40:01 -0400
+Tue, 05 Jun 2018 15:11:11 -0400
 </pubDate>
 <lastBuildDate>
-Tue, 05 Jun 2018 14:40:01 -0400
+Tue, 05 Jun 2018 15:11:11 -0400
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -31,11 +31,28 @@ clj-rss
 </generator>
 <item>
 <title>
+Log Entry 1
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l1
+</link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l1
+</guid>
+<description>
+<![CDATA[ <p>Had a brief chance to play with this at TEI 2018, so many unique interface possibilities. Big thanks to <a href="https://clementzheng.info/">Clement Zheng</a> for doing the demos.</p><figure><a class="img-wrap" href="mechamagnets-base.jpg"><picture><source media="(max-width: 640px)" srcset="mechamagnets-small.jpg 1x, mechamagnets-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="mechamagnets-medium.jpg" /><source media="(min-width: 1280px)" srcset="mechamagnets-large.jpg" /><img alt="mechamagnets" src="mechamagnets-medium.jpg" /></picture></a></figure><p><a href="https://www.colorado.edu/atlas/mechamagnets">More details from the Atlas Institute</a></p> ]]>
+</description>
+</item>
+<item>
+<title>
 Log Entry 0
 </title>
 <link>
 https://boris.kourtoukov.com/log-0.html#l0
 </link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l0
+</guid>
 <description>
 <![CDATA[ <p>Hello Log!</p> ]]>
 </description>
