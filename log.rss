@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Tue, 05 Jun 2018 15:11:11 -0400
+Sun, 10 Jun 2018 16:55:09 -0400
 </pubDate>
 <lastBuildDate>
-Tue, 05 Jun 2018 15:11:11 -0400
+Sun, 10 Jun 2018 16:55:09 -0400
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -29,6 +29,20 @@ Copyright 2018 Boris Kourtoukv
 <generator>
 clj-rss
 </generator>
+<item>
+<title>
+Log Entry 2
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l2
+</link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l2
+</guid>
+<description>
+<![CDATA[ <p>Enjoyed co-running the first of three Interactive Spaces workshops at ITP Camp. These wonderful people came up with some amazing ideas for us to move forward with!</p><figure><a class="img-wrap" href="itp-interactive-spaces-base.jpg"><picture><source media="(max-width: 640px)" srcset="itp-interactive-spaces-small.jpg 1x, itp-interactive-spaces-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="itp-interactive-spaces-medium.jpg 1x, itp-interactive-spaces-medium-2x.jpg 2x" /><source media="(min-width: 1280px)" srcset="itp-interactive-spaces-large.jpg 1x, itp-interactive-spaces-large-2x.jpg 2x" /><img alt="interactive-spaces" src="itp-interactive-spaces-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 1
