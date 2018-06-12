@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Sun, 10 Jun 2018 16:55:09 -0400
+Tue, 12 Jun 2018 14:41:42 -0400
 </pubDate>
 <lastBuildDate>
-Sun, 10 Jun 2018 16:55:09 -0400
+Tue, 12 Jun 2018 14:41:42 -0400
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -29,6 +29,20 @@ Copyright 2018 Boris Kourtoukv
 <generator>
 clj-rss
 </generator>
+<item>
+<title>
+Log Entry 3
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l3
+</link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l3
+</guid>
+<description>
+<![CDATA[ <h3>A Time and a Place</h3><figure><a class="img-wrap" href="a-time-and-a-place-a-base.jpg"><picture><source media="(max-width: 640px)" srcset="a-time-and-a-place-a-small.jpg 1x, a-time-and-a-place-a-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="a-time-and-a-place-a-medium.jpg" /><source media="(min-width: 1280px)" srcset="a-time-and-a-place-a-large.jpg" /><img alt="a-time-and-a-place" src="a-time-and-a-place-a-medium.jpg" /></picture></a></figure><p>Tuesday, June 12, 2018</p> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 2
