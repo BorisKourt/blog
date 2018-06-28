@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Mon, 25 Jun 2018 04:45:14 -0400
+Thu, 28 Jun 2018 16:39:07 -0400
 </pubDate>
 <lastBuildDate>
-Mon, 25 Jun 2018 04:45:14 -0400
+Thu, 28 Jun 2018 16:39:07 -0400
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -31,6 +31,20 @@ clj-rss
 </generator>
 <item>
 <title>
+Log Entry 5
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l5
+</link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l5
+</guid>
+<description>
+<![CDATA[ <p>Working on a project with <a href="https://www.arantxaaraujo.com/">Arantxa Araujo</a>. This garment will be used in the July 12 <a href="https://www.brooklynmuseum.org/calendar/event/performance_series_july_5_2018/">Cuerpxs Radicales</a> performance series at the Brooklyn Museum.</p><figure><a class="img-wrap" href="arantxa-araujo-cuerpxs-radicales-base.jpg"><picture><source media="(max-width: 640px)" srcset="arantxa-araujo-cuerpxs-radicales-small.jpg 1x, arantxa-araujo-cuerpxs-radicales-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="arantxa-araujo-cuerpxs-radicales-medium.jpg 1x, arantxa-araujo-cuerpxs-radicales-medium-2x.jpg 2x" /><source media="(min-width: 1280px)" srcset="arantxa-araujo-cuerpxs-radicales-large.jpg 1x, arantxa-araujo-cuerpxs-radicales-large-2x.jpg 2x" /><img alt="arantxa-araujo-cuerpxs-radicales" src="arantxa-araujo-cuerpxs-radicales-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
+<item>
+<title>
 Log Entry 4
 </title>
 <link>
@@ -40,7 +54,7 @@ https://boris.kourtoukov.com/log-0.html#l4
 https://boris.kourtoukov.com/log-0.html#l4
 </guid>
 <description>
-<![CDATA[ <h3>Summer Sessions @V2_</h3><p>Super excited to announce that I will be a resident at the <a href="http://v2.nl/">V2_</a> Lab this summer. Can&apos;t wait to share more about what I will be working on.</p><p>Massive thanks to V2_ &amp; <a href="http://www.pnek.org/">PNEK</a> for giving me this opportunity</p><figure><a class="img-wrap" href="v2-summer-sessions-announcement-base.jpg"><picture><source media="(max-width: 640px)" srcset="v2-summer-sessions-announcement-small.jpg 1x, v2-summer-sessions-announcement-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="v2-summer-sessions-announcement-medium.jpg" /><source media="(min-width: 1280px)" srcset="v2-summer-sessions-announcement-large.jpg" /><img alt="summer-sessions-v2-announcement" src="v2-summer-sessions-announcement-medium.jpg" /></picture></a></figure> ]]>
+<![CDATA[ <h3>Summer Sessions @V2_</h3><p>Super excited to announce that I will be a resident at <a href="http://v2.nl/">V2_</a> this summer. Can&apos;t wait to share more about what I will be working on.</p><p>Massive thanks to V2_ &amp; <a href="http://www.pnek.org/">PNEK</a> for giving me this opportunity</p><figure><a class="img-wrap" href="v2-summer-sessions-announcement-base.jpg"><picture><source media="(max-width: 640px)" srcset="v2-summer-sessions-announcement-small.jpg 1x, v2-summer-sessions-announcement-small-2x.jpg 2x" /><source media="(min-width: 641px)" srcset="v2-summer-sessions-announcement-medium.jpg" /><source media="(min-width: 1280px)" srcset="v2-summer-sessions-announcement-large.jpg" /><img alt="summer-sessions-v2-announcement" src="v2-summer-sessions-announcement-medium.jpg" /></picture></a></figure> ]]>
 </description>
 </item>
 <item>
