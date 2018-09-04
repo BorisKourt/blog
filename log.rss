@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Wed, 01 Aug 2018 13:15:02 +0200
+Tue, 04 Sep 2018 10:48:31 +0200
 </pubDate>
 <lastBuildDate>
-Wed, 01 Aug 2018 13:15:02 +0200
+Tue, 04 Sep 2018 10:48:31 +0200
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -29,6 +29,20 @@ Copyright 2018 Boris Kourtoukv
 <generator>
 clj-rss
 </generator>
+<item>
+<title>
+Log Entry 8
+</title>
+<link>
+https://boris.kourtoukov.com/log-0.html#l8
+</link>
+<guid>
+https://boris.kourtoukov.com/log-0.html#l8
+</guid>
+<description>
+<![CDATA[ <p>The Final Presentation</p><figure><a class="img-wrap" href="summer-sessions-show-base.jpg"><picture><source media="(max-width: 420px)" srcset="summer-sessions-show-small.jpg 1x, summer-sessions-show-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="summer-sessions-show-medium.jpg 1x, summer-sessions-show-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="summer-sessions-show-large.jpg 1x, summer-sessions-show-large-2x.jpg 2x" /><img alt="summer-sessions-show" src="summer-sessions-show-medium.jpg" /></picture></a></figure><p><a href="http://v2.nl/events/summer-sessions-2018-kunstavond-xl-1">Event Details</a></p> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 7
