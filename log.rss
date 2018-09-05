@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Tue, 04 Sep 2018 20:37:42 +0200
+Wed, 05 Sep 2018 21:31:30 +0200
 </pubDate>
 <lastBuildDate>
-Tue, 04 Sep 2018 20:37:42 +0200
+Wed, 05 Sep 2018 21:31:30 +0200
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -29,6 +29,20 @@ Copyright 2018 Boris Kourtoukv
 <generator>
 clj-rss
 </generator>
+<item>
+<title>
+Log Entry 10
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l10
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l10
+</guid>
+<description>
+<![CDATA[ <p>Further setup, the triplets are now levitating. <a href="http://v2.nl/events/summer-sessions-2018-kunstavond-xl-1">Event info from V2_</a></p><figure><a class="img-wrap" href="machines-triplets-base.jpg"><picture><source media="(max-width: 420px)" srcset="machines-triplets-small.jpg 1x, machines-triplets-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="machines-triplets-medium.jpg 1x, machines-triplets-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="machines-triplets-large.jpg 1x, machines-triplets-large-2x.jpg 2x" /><img alt="machines-that-judge-us-triplets" src="machines-triplets-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 9
