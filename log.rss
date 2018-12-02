@@ -15,10 +15,10 @@ Personal Updates
 en
 </language>
 <pubDate>
-Wed, 05 Sep 2018 21:31:30 +0200
+Sun, 02 Dec 2018 00:00:43 -0500
 </pubDate>
 <lastBuildDate>
-Wed, 05 Sep 2018 21:31:30 +0200
+Sun, 02 Dec 2018 00:00:43 -0500
 </lastBuildDate>
 <managingEditor>
 boris@kourtoukov.com
@@ -29,6 +29,62 @@ Copyright 2018 Boris Kourtoukv
 <generator>
 clj-rss
 </generator>
+<item>
+<title>
+Log Entry 14
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l14
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l14
+</guid>
+<description>
+<![CDATA[ <figure><a class="img-wrap" href="int-ta-base.jpg"><picture><source media="(max-width: 420px)" srcset="int-ta-small.jpg" /><source media="(min-width: 421px)" srcset="int-ta-medium.jpg" /><img alt="int" src="int-ta-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
+<item>
+<title>
+Log Entry 13
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l13
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l13
+</guid>
+<description>
+<![CDATA[ <figure><a class="img-wrap" href="yunnan-a-base.jpg"><picture><source media="(max-width: 420px)" srcset="yunnan-a-small.jpg 1x, yunnan-a-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="yunnan-a-medium.jpg 1x, yunnan-a-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="yunnan-a-large.jpg 1x, yunnan-a-large-2x.jpg 2x" /><img alt="yunnan" src="yunnan-a-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
+<item>
+<title>
+Log Entry 12
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l12
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l12
+</guid>
+<description>
+<![CDATA[ <figure><a class="img-wrap" href="changsha-a-base.jpg"><picture><source media="(max-width: 420px)" srcset="changsha-a-small.jpg 1x, changsha-a-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="changsha-a-medium.jpg 1x, changsha-a-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="changsha-a-large.jpg 1x, changsha-a-large-2x.jpg 2x" /><img alt="changsha" src="changsha-a-medium.jpg" /></picture></a></figure><figure><a class="img-wrap" href="changsha-b-base.jpg"><picture><source media="(max-width: 420px)" srcset="changsha-b-small.jpg 1x, changsha-b-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="changsha-b-medium.jpg 1x, changsha-b-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="changsha-b-large.jpg 1x, changsha-b-large-2x.jpg 2x" /><img alt="changsha" src="changsha-b-medium.jpg" /></picture></a></figure><figure><a class="img-wrap" href="changsha-c-base.jpg"><picture><source media="(max-width: 420px)" srcset="changsha-c-small.jpg 1x, changsha-c-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="changsha-c-medium.jpg 1x, changsha-c-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="changsha-c-large.jpg 1x, changsha-c-large-2x.jpg 2x" /><img alt="changsha" src="changsha-c-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
+<item>
+<title>
+Log Entry 11
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l11
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l11
+</guid>
+<description>
+<![CDATA[ <figure><a class="img-wrap" href="hunan-a-base.jpg"><picture><source media="(max-width: 420px)" srcset="hunan-a-small.jpg 1x, hunan-a-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="hunan-a-medium.jpg 1x, hunan-a-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="hunan-a-large.jpg 1x, hunan-a-large-2x.jpg 2x" /><img alt="hunan" src="hunan-a-medium.jpg" /></picture></a></figure><figure><a class="img-wrap" href="hunan-b-base.jpg"><picture><source media="(max-width: 420px)" srcset="hunan-b-small.jpg 1x, hunan-b-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="hunan-b-medium.jpg 1x, hunan-b-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="hunan-b-large.jpg 1x, hunan-b-large-2x.jpg 2x" /><img alt="hunan" src="hunan-b-medium.jpg" /></picture></a></figure><figure><a class="img-wrap" href="hunan-c-base.jpg"><picture><source media="(max-width: 420px)" srcset="hunan-c-small.jpg 1x, hunan-c-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="hunan-c-medium.jpg 1x, hunan-c-medium-2x.jpg 2x" /><source media="(min-width: 800px)" srcset="hunan-c-large.jpg 1x, hunan-c-large-2x.jpg 2x" /><img alt="hunan" src="hunan-c-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 10
