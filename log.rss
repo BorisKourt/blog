@@ -2,33 +2,47 @@
 <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
 <channel>
 <atom:link href='https://boris.kourtoukov.com/' rel='self' type='application/rss+xml'/>
-<title>
-Boris Kourtoukov
-</title>
-<link>
-https://boris.kourtoukov.com/
-</link>
 <description>
 Personal Updates
 </description>
+<lastBuildDate>
+Tue, 19 Mar 2019 01:00:32 +0100
+</lastBuildDate>
+<pubDate>
+Tue, 19 Mar 2019 01:00:32 +0100
+</pubDate>
+<copyright>
+Copyright 2019 Boris Kourtoukov
+</copyright>
+<title>
+Boris Kourtoukov
+</title>
 <language>
 en
 </language>
-<pubDate>
-Sun, 02 Dec 2018 00:00:43 -0500
-</pubDate>
-<lastBuildDate>
-Sun, 02 Dec 2018 00:00:43 -0500
-</lastBuildDate>
-<managingEditor>
-boris@kourtoukov.com
-</managingEditor>
-<copyright>
-Copyright 2018 Boris Kourtoukv
-</copyright>
+<link>
+https://boris.kourtoukov.com/
+</link>
 <generator>
 clj-rss
 </generator>
+<managingEditor>
+boris@kourtoukov.com
+</managingEditor>
+<item>
+<title>
+Log Entry 15
+</title>
+<link>
+https://boris.kourtoukov.com/log-1.html#l15
+</link>
+<guid>
+https://boris.kourtoukov.com/log-1.html#l15
+</guid>
+<description>
+<![CDATA[ <figure><a class="img-wrap" href="machines-aho-base.jpg"><picture><source media="(max-width: 420px)" srcset="machines-aho-small.jpg 1x, machines-aho-small-2x.jpg 2x" /><source media="(min-width: 421px)" srcset="machines-aho-medium.jpg" /><source media="(min-width: 800px)" srcset="machines-aho-large.jpg" /><img alt="machines-aho" src="machines-aho-medium.jpg" /></picture></a></figure> ]]>
+</description>
+</item>
 <item>
 <title>
 Log Entry 14
